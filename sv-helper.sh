@@ -163,6 +163,6 @@ case "$cmd" in
   ls|svls) list $@;;
   make-links) make_links;;
   find|sv-find) find_service $@;;
-  list|sv-list) find $(find_service) -maxdepth 1 -mindepth 1 -type d -exec basename {} \;|sort|tr "\n" " ";echo ;;
+  list|sv-list) find $(find_service) -maxdepth 1 -mindepth 1 -type d -exec basename {} \;|sort|tr " " "\n";echo ;;
   *) usage commands;;
 esac
